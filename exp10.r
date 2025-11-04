@@ -34,10 +34,11 @@ cat("\nHierarchical Cluster Sizes:\n"); print(table(data$HC_Cluster))
 cat("\nCluster-wise Averages (K-Means):\n")
 print(aggregate(num_data, by=list(Cluster=data$KMeans_Cluster), FUN=mean))
 
-# 📦 (c) Example: Compare Distribution of One Variable
+#  (c) Example: Compare Distribution of One Variable
 boxplot(num_data[,1] ~ data$KMeans_Cluster,
         main=paste("Distribution of", colnames(num_data)[1], "by Cluster"),
         xlab="Cluster", ylab=colnames(num_data)[1])
 
-cat("\n✅ Clustering completed successfully!\n")
+cat("\n Clustering completed successfully!\n")
+
 
