@@ -1,0 +1,15 @@
+data() 
+mtcars 
+summary(mtcars)
+str(mtcars) 
+quantile(mtcars$mpg) 
+summary(cars) 
+class(cars) 
+dim(cars) 
+quantile(cars$speed) 
+aggregate(. ~ Species, data = iris, mean) 
+subset(iris,iris$Sepal.Length==5.0) 
+subset(iris, Species == "setosa") 
+subset(iris, Species == "versicolor" & Petal.Length > 4.5) 
+aggregate(Sepal.Length ~ Species, data = iris, FUN = sd)
+
