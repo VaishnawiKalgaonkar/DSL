@@ -32,3 +32,10 @@ cat("MSE:", mse(test$Stress_Level, pred),
 corrplot(cor(data), method = "color", type = "upper",
          tl.col = "black", tl.srt = 45, addCoef.col = "black",
          col = colorRampPalette(c("red", "white", "blue"))(200))
+# Predict on training data too
+train_pred <- predict(model, newdata = train)
+
+train_mse <- mse(train$Stress_Level, train_pred)
+test_mse  <- mse(test$Stress_Level, pred)
+
+cat("Train MSE:", train_mse, "\nTest MSE:", test_mse, "\n")
